@@ -1,0 +1,12 @@
+version: "3"
+services:
+  egg:
+    build: .
+    command: yarn dev
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 3152:3152
+    environment:
+      - PORT=3152
+      - SECRET_KEY="some random key"
